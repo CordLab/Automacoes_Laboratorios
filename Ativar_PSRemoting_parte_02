@@ -1,0 +1,15 @@
+#SEGUNDO SCRIPT PARA USO DO PSREMOTING
+
+#habilitar psremoting
+Enable-PSRemoting -Force
+
+#setar o host como confiavel no wsman
+Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
+
+#reiniciar o serviço winrm
+Restart-Service WinRM
+
+Test-WSMan -ComputerName seu_servidor_aqui
+
+Write-Output ""
+Write-Output "OK Tudo pronto para usar o PSRemoting"

@@ -1,0 +1,15 @@
+# Primeiro script a ser executado
+# execute o comando abaixo manualmente depois rode o scritp
+
+#      Set-ExecutionPolicy remotesigned -Force
+
+# definir senha para o usuario Administrador e ativa-lo
+
+net user Administrador senha_aqui /ACTIVE:YES 
+
+# demais atividades
+wusa.exe C:\Users\clab\Desktop\ps4lab\powershell4.msu /quiet /norestart
+timeout 60
+shutdown -r 
+
+##daqui pra baixo tem que ser outro script
