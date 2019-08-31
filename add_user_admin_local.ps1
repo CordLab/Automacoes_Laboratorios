@@ -1,10 +1,9 @@
-## Adiciona o usuário alunoifro do domínio ao grupo administradores.
+# Adiciona o usuário alunoifro do domínio ao grupo administradores.
 
 $credencial = Get-Credential Administrador
 $computers = Get-Content C:\Users\Lenovo\Desktop\labin_a_pcs.txt
 $online = @()
 $offline = @()
-
 
 Foreach($pc in $computers) {
     if (Test-Connection -BufferSize 32 -Count 1 -ComputerName $pc -Quiet) {
