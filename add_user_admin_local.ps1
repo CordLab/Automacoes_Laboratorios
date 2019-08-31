@@ -22,5 +22,3 @@ Write-Output "O comando sera executado nos seguintes computadores: " $online
 Write-Output "Total de computadores ligados: " $online.Count 
 
 Invoke-Command -ComputerName $online { net localgroup Administradores alunoifro /add } -Credential $credencial
-
-#para remover o usuario do grupo use /delete
